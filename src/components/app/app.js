@@ -1,15 +1,14 @@
 import React from "react";
-import ErrorBoundry from "../error-boundry";
-import ErrorIndicator from "../error-indicator";
-import Spinner from "../spinner";
+import { withBookstoreService } from "../hoc";
+import { Route, Switch } from "react-router-dom";
+import { HomePage, CartPage } from "../pages";
 
-const App =()=>{
-    return(
-        <ErrorBoundry>
-        <div>Hello</div>
-            <ErrorIndicator/>
-            <Spinner/>
-        </ErrorBoundry>
-    )
+const App = ({ bookstoreService }) => {
+  return (
+    <Switch>
+      <Route path="/" component={HomePage} exact />
+      <Route path="/cart" component={CartPage} exact />
+    </Switch>
+  );
 };
-export default App;
+export default withBookstoreService()(App);
