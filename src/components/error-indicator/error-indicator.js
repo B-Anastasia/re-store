@@ -1,5 +1,6 @@
 import React from "react";
-import './error-indicator.css';
+import "./error-indicator.css";
+import { Link } from "react-router-dom";
 
 const ErrorIndicator = () => {
   return (
@@ -7,9 +8,9 @@ const ErrorIndicator = () => {
       <h1>Sorry</h1>
       <span>Looks like something went wrong on our end.</span>
       <span>Head back to Homepage.</span>
-      <a className="btn draw-border outline-none" to="/">
+      <Link className="btn draw-border outline-none" to="/">
         Go Back
-      </a>
+      </Link>
     </div>
   );
 };
