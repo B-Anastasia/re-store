@@ -1,0 +1,9 @@
+button {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.sum {
+  text-align: right;
+  font-size: 1.3rem;
+  margin-left: 10px;
+}
