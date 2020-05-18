@@ -22,4 +22,11 @@ const fetchBooks = (dispatch, bookstoreService) => () => {
     .then((data) => dispatch(loadedBooks(data)))
     .catch((err) => dispatch(errorBooks(err))); //to get data and dispatch to store
 };
-export { fetchBooks };
+
+const bookAddedToCart = (bookId) => {
+  return {
+    type: "BOOK_ADDED_TO_CART",
+    payload: bookId,
+  };
+};
+export { fetchBooks, bookAddedToCart };
