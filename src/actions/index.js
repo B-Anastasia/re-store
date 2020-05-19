@@ -29,4 +29,22 @@ const bookAddedToCart = (bookId) => {
     payload: bookId,
   };
 };
-export { fetchBooks, bookAddedToCart };
+const decreaseCountBooksInCart = (bookId) => {
+  return {
+    type: "DECREASE_COUNT_BOOKS_IN_CART",
+    payload: bookId,
+  };
+};
+const deleteBookFromCart = (bookId) => {
+  return {
+    type: "DELETE_BOOK_FROM_CART",
+    payload: bookId,
+  };
+};
+
+export {
+  fetchBooks,
+  bookAddedToCart,
+  decreaseCountBooksInCart,
+  deleteBookFromCart,
+};
